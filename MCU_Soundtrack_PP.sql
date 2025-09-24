@@ -219,6 +219,7 @@ INSERT INTO soundtracks (soundtrack_id, chron_num, title, track_count, duration_
 VALUES (18, 20, 'Ant-Man and the Wasp (Original Motion Picture Soundtrack)', 25, 56, 14, 34);
 INSERT INTO soundtracks (soundtrack_id, chron_num, title, track_count, duration_min, downloaded_tracks, downloaded_duration)
 VALUES (19, 19, 'Avengers: Infinity War (Original Motion Picture Soundtrack)', 30, 117, 18, 69);
+-- Soundtracks from Phase 3
 INSERT INTO soundtracks (soundtrack_id, chron_num, title, track_count, duration_min, downloaded_tracks, downloaded_duration)
 VALUES (20, 18, 'Black Panther (Original Score)', 28, 95, 15, 57),
 	   (21, 17, 'Thor: Ragnarok (Original Motion Picture Soundtrack)', 23, 73, 14, 46),
@@ -226,6 +227,7 @@ VALUES (20, 18, 'Black Panther (Original Score)', 28, 95, 15, 57),
 	   (23, 15, 'Guardians of the Galaxy Vol. 2 (Original Score)', 19, 44, 12, 27),
 	   (24, 14, 'Doctor Strange (Original Motion Picture Soundtrack)', 19, 66, 10, 42),
 	   (25, 13, 'Captain America: Civil War (Original Motion Picture Soundtrack)', 21, 69, 10, 31);
+-- Soundtracks from Phase 2
 INSERT INTO soundtracks (soundtrack_id, chron_num, title, track_count, duration_min, downloaded_tracks, downloaded_duration)
 VALUES (26, 12, 'Ant-Man (Original Motion Picture Soundtrack)', 31, 53, 15, 31),
 	   (27, 11, 'Avengers: Age of Ultron (Original Motion Picture Soundtrack)', 29, 78, 15, 43),
@@ -233,6 +235,7 @@ VALUES (26, 12, 'Ant-Man (Original Motion Picture Soundtrack)', 31, 53, 15, 31),
        (29, 9, 'Captain America: The Winter Soldier (Original Motion Picture Soundtrack)', 20, 71, 10, 41),
        (30, 8, 'Thor: The Dark World (Original Motion Picture Soundtrack)', 26, 77, 17, 52),
        (31, 7, 'Iron Man 3 (Original Motion Picture Soundtrack)', 20, 76, 11, 47);
+-- Soundtracks from Phase 1
 INSERT INTO soundtracks (soundtrack_id, chron_num, title, track_count, duration_min, downloaded_tracks, downloaded_duration)
 VALUES (32, 6, 'The Avengers (Original Motion Picture Soundtrack)', 18, 65, 12, 45),
 	   (33, 5, 'Captain America: The First Avenger (Original Motion Picture Soundtrack)', 27, 74, 15, 42),
