@@ -233,3 +233,10 @@ VALUES (26, 12, 'Ant-Man (Original Motion Picture Soundtrack)', 31, 53, 15, 31),
        (29, 9, 'Captain America: The Winter Soldier (Original Motion Picture Soundtrack)', 20, 71, 10, 41),
        (30, 8, 'Thor: The Dark World (Original Motion Picture Soundtrack)', 26, 77, 17, 52),
        (31, 7, 'Iron Man 3 (Original Motion Picture Soundtrack)', 20, 76, 11, 47);
+INSERT INTO soundtracks (soundtrack_id, chron_num, title, track_count, duration_min, downloaded_tracks, downloaded_duration)
+VALUES (32, 6, 'The Avengers (Original Motion Picture Soundtrack)', 18, 65, 12, 45),
+	   (33, 5, 'Captain America: The First Avenger (Original Motion Picture Soundtrack)', 27, 74, 15, 42),
+	   (34, 4, 'Thor (Soundtrack from the Motion Picture)', 24, 72, 12, 41),
+	   (35, 3, 'Iron Man 2 (Original Motion Picture Score)', 25, 72, 16, 56),
+	   (36, 2, 'The Incredible Hulk (Original Motion Picture Score)', 45, 111, 21, 62),
+	   (37, 1, 'Iron Man (Original Motion Picture Soundtrack)', 19, 54, 12, 34);
