@@ -243,3 +243,26 @@ VALUES (32, 6, 'The Avengers (Original Motion Picture Soundtrack)', 18, 65, 12, 
 	   (35, 3, 'Iron Man 2 (Original Motion Picture Score)', 25, 72, 16, 56),
 	   (36, 2, 'The Incredible Hulk (Original Motion Picture Score)', 45, 111, 21, 62),
 	   (37, 1, 'Iron Man (Original Motion Picture Soundtrack)', 19, 54, 12, 34);
+
+-- Creating a table that assigns each composer to their corresponding movie via the movie's
+-- chronological number
+CREATE TABLE composers_with_movies AS 
+SELECT mc.chron_num, c.first_name, c.last_name 
+FROM composers as c
+INNER JOIN movie_composers as mc ON c.composer_id = mc.composer_id;
+
+-- Creating a table that assigns each composer to their corresponding soundtrack
+CREATE TABLE composers_with_soundtracks AS
+SELECT s.chron_num, s.title, cwm.first_name, cwm.last_name, s.track_count, s.duration_min, 
+s.downloaded_tracks, s.downloaded_duration
+FROM soundtracks as s
+INNER JOIN composers_with_movies AS cwm ON s.chron_num = cwm.chron_num;
+
+-- Creating a table that assigns all the soundtrack data to its corresponding movie
+-- Excluding the soundtrack titles since they're all direct derivatives of the movie titles
+CREATE TABLE movies_plus_soundtracks AS
+SELECT m.chron_num, m.timeline_num, m.title, m.release_date, m.runtime_min, m.phase_id,
+m.saga_id, cws.first_name, cws.last_name, cws.track_count, cws.duration_min,
+cws.downloaded_tracks, cws.downloaded_duration
+FROM movies as m
+INNER JOIN composers_with_soundtracks AS cws ON m.chron_num = cws.chron_num;
