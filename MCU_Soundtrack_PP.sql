@@ -266,3 +266,13 @@ m.saga_id, cws.first_name, cws.last_name, cws.track_count, cws.duration_min,
 cws.downloaded_tracks, cws.downloaded_duration
 FROM movies as m
 INNER JOIN composers_with_soundtracks AS cws ON m.chron_num = cws.chron_num;
+
+DROP TABLE movies_plus_soundtracks;
+-- Recreating the table with saga_name instead of saga_id since I feel like that is more descriptive
+CREATE TABLE movies_plus_soundtracks AS
+SELECT m.chron_num, m.timeline_num, m.title, m.release_date, m.runtime_min, m.phase_id,
+s.saga_name, cws.first_name, cws.last_name, cws.track_count, cws.duration_min,
+cws.downloaded_tracks, cws.downloaded_duration
+FROM movies as m
+INNER JOIN composers_with_soundtracks AS cws ON m.chron_num = cws.chron_num
+LEFT JOIN sagas AS s ON m.saga_id = s.saga_id;
